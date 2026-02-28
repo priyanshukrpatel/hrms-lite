@@ -1,0 +1,70 @@
+/* Container for table */
+.employee-list-container {
+  width: 100%;
+  overflow-x: auto; /* horizontal scroll for small screens */
+  margin-top: 1rem;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: #333;
+}
+
+/* Table styling */
+.employee-table {
+  width: 100%;
+  border-collapse: collapse;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Table head styling */
+.employee-table th {
+  padding: 12px 15px;
+  text-align: left;
+  background-color: #2c3e50;
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 14px;
+}
+
+/* Table body styling */
+.employee-table td {
+  padding: 10px 15px;
+  border-bottom: 1px solid #ddd;
+  font-size: 14px;
+}
+
+/* Alternating row colors */
+.employee-table tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+/* Hover effect */
+.employee-table tr:hover {
+  background-color: #eaeaea;
+}
+
+/* Delete button */
+.delete-btn {
+  background-color: #e74c3c;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.delete-btn:hover {
+  background-color: #c0392b;
+}
+
+/* Responsive for small screens */
+@media (max-width: 768px) {
+  .employee-table th, .employee-table td {
+    padding: 8px 10px;
+    font-size: 13px;
+  }
+
+  .delete-btn {
+    padding: 5px 10px;
+    font-size: 12px;
+  }
+}

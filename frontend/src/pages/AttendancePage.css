@@ -1,0 +1,117 @@
+/* Container for the page */
+.container {
+  max-width: 1200px;  /* wider for bigger screens */
+  margin: 0 auto;
+  padding: 1rem;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: #333;
+}
+
+/* Page title */
+h3 {
+  text-align: center;
+  margin-bottom: 2rem;
+  color: #2c3e50;
+  font-size: 1.8rem;
+}
+
+/* Flex wrapper for table + summary */
+.flex-wrapper {
+  display: flex;
+  gap: 2rem;
+  align-items: flex-start;
+  flex-wrap: wrap; /* wrap on smaller screens */
+}
+
+/* Attendance/Employee table */
+.attendance-table {
+  flex: 3;
+  min-width: 300px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+/* Table styling */
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th, td {
+  padding: 12px 15px;
+  text-align: left;
+  font-size: 0.95rem;
+}
+
+th {
+  background-color: #2c3e50;
+  color: #fff;
+  font-weight: 600;
+}
+
+tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+tr:hover {
+  background-color: #eaeaea;
+}
+
+/* Summary panel */
+.summary {
+  flex: 1;
+  min-width: 220px;
+  border: 1px solid #ccc;
+  padding: 1.2rem;
+  border-radius: 8px;
+  background-color: #fdfdfd;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+/* Summary title */
+.summary h4 {
+  margin-top: 0;
+  margin-bottom: 1rem;
+  color: #2c3e50;
+  font-size: 1.2rem;
+}
+
+/* Status colors */
+.status-present {
+  color: #27ae60;
+  font-weight: bold;
+}
+
+.status-absent {
+  color: #c0392b;
+  font-weight: bold;
+}
+
+/* Responsive adjustments */
+@media (max-width: 900px) {
+  .flex-wrapper {
+    flex-direction: column;
+  }
+
+  .attendance-table,
+  .summary {
+    width: 100%;
+  }
+
+  th, td {
+    font-size: 0.9rem;
+    padding: 10px;
+  }
+
+  .summary h4 {
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 500px) {
+  th, td {
+    padding: 8px;
+    font-size: 0.85rem;
+  }
+}
